@@ -1,3 +1,9 @@
+
+<?php
+require_once '../config/db.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +25,36 @@
     <main style="font-size: 30px; text-align: center; margin: 20px; margin-left:30px">Riz Ivan G. Verana
             
     <a href="https://github.com/Sinnca" class="github"><br>GitHub</a>
+        <p>List of registered users</p>
+        <?php
 
+            $sql = "SELECT * FROM users";
+            $data = mysqli_query($conn, $sql);
 
+            if ($data && mysqli_num_rows($data) > 1){
+                while ($user_details = mysqli_fetch_assoc($data)){
+                    echo "Registered Users: " . $user_details['id'] . "<br>";
+                    echo "Username: " . $user_details['username'];
+                } 
+            } else  {
+                    echo "No registered users found.";
+                }
+        ?>
+    
+        <p>List of Consultants</p>
+        <?php
+        $sql = "SELECT * FROM consultants";
+        $data = mysqli_query($conn, $sql);
+
+        if ($data && mysqli_num_rows($data) > 1) {
+            while ($c_details = mysqli_fetch_assoc($data)){
+                echo "Expertise: " . $c_details['expertise'];
+                echo " Username: " . $c_details['username'] . "<br>";
+            } 
+        } else {
+            echo "No consultants found";
+        }
+        ?>
 </body>
 </html>
 <style>
