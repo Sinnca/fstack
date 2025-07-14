@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/practice/php/contact.php" method="post" id="form">
+
+        <label for="Name" class="Name">Name:</label>
+        <input type="text" name="Name" id="Name" required>
+        <br>
+        <label for="Email" class="Email">Email:</label>
+        <input type="text" name="Email" id="Email" required>
+        <br>
+        <label for="Message" class="Message">Message:</label>
+        <input type="text" name="Message" id="Message"  required>
+        <br>
+        <input type="submit" class="Submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("form"). addEventListener("submit", function(event){
+            let email = document.getElementById("Email").value;
+            let name = document.getElementById("Name").value;
+            let message = document.getElementById("Message").value;
+
+            if (!email.includes("@gmail.com") || email.trim() == "" || name.trim() == "" || message.trim() == ""){
+                document.getElementById("Email").value = "";
+                alert ("Please input a valid Email");
+                event.preventDefault();
+            } 
+        })
+    </script>
+</body>
+</html>

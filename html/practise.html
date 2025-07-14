@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVARIZE</title>
+</head>
+<body>
+    <!-- <label for="Number">Number:</label>
+    <input type="text" id="Number">
+    <p id="output"></p>
+    <button onclick="ShowNum()"> Show Number </button> -->
+
+    <!-- <script>
+        function ShowNum() {
+            let number = document.getElementById("Number").value;
+            if (number === "") {
+                document.getElementById("output").textContent = "Output: " + number;
+            } else {
+                document.getElementById("output").textContent = "Output: " + number;
+            }
+        }
+    </script>
+
+    <p id="MyMessage"></p>
+    <button onclick="AboutMe()">Show Message</button>
+
+    <script>
+        let About = "Hi, My name is Riz Ivan G. Verana, an aspiring student that wants to be a full stack web developer";
+
+        function AboutMe(){
+            let Message = document.getElementById("MyMessage").textContent = About;
+        } 
+    </script>
+
+
+    <p id="user"></p>
+    <p id="User"></p>
+    <button onclick="yUser()">Show New</button>
+    <script>
+        let myUser = "Riz";
+        document.getElementById("user").textContent = "Your old Username: " + myUser;
+            function yUser() {
+                let myUser = "Lucille";
+                document.getElementById("User").textContent = "Your new Username is: " + myUser;
+            }
+    </script>
+
+
+
+<p id="parameter"></p>
+<button onclick="Mensahe(message, text)">Show Message</button>
+
+    <script>
+        let message = "Hello";
+        let text = "Hii";
+        function Mensahe(message,text){
+            if (message === undefined || text === undefined) { 
+                alert("No Message or Text Found")
+            } else{
+                document.getElementById("parameter").textContent = "Message: "+ message + " Text: " + text;
+            }
+        }
+        Mensahe("HAHAHAH","ATTTDDOOOGG");
+        
+    </script>
+
+    <script>
+        function CAge(age) {
+        return (age > 18) || confirm('Did parents allow you?');
+        }
+
+        // To use the function, prompt for age and check access:
+        let age = prompt("Gano kana kagulang?", undefined);
+        if (CAge(age)) {
+            alert("Access Granted");
+        } else {
+            alert("Access Denied");
+        }
+        </script> --> 
+        <!-- <h1>Addition</h1>
+
+        <input type="number" id="n1" placeholder="Enter Number: ">
+        <input type="number" id="n2" placeholder="Enter Number: ">
+
+        <p id="Output"></p>
+        <button onclick="add(Number(document.getElementById('n1').value),Number(document.getElementById('n2').value))">Result</button>     
+
+        <script>
+            // let num1 = document.getElementById("n1").value;
+            // let num2 = document.getElementById("n2").value;
+            function add(num1,num2){
+                if (isNaN (num1) || isNaN (num2)) {
+                    alert("Please Input Valid Numbers");
+                } else {
+                    document.getElementById("Output").textContent = "Output: " + (num1 + num2);
+                }
+            }
+            
+        </script> -->
+
+
+        <!-- <script>
+            let day = prompt('What day is my birthday?', '');
+            if (day > 26){
+            alert("Too late");
+            } else if (day < 26)
+                alert("Too early");
+            else {
+                alert("Correct");
+            }
+
+            let accessAllowed;
+            let allows = prompt("How old are you?", "");
+            if (allows > 18 ){
+                accessAllowed = true;
+            }   else {
+                accessAllowed = false;
+            }
+            alert(accessAllowed);
+        </script> -->
+
+        <!-- <script>
+                // while loop
+            let i = 5;
+            while (i < 11) alert(i++);
+
+                // do while loop
+            let x = 5;
+            do {
+                alert(x++);
+            }   while (x < 10);
+
+            // for loop
+            let z = 0;
+            for(z = 10; z < 15;){
+                alert(z++);
+            }
+            alert(z);
+            </script> -->
+            
+            <!-- add two numbers with while loop -->
+            <!-- <input type="number" id="n1" placeholder="Enter 1st Number: ">
+            <input type="number" id="n2" placeholder="Enter 2nd Number: ">
+
+            <p id="Output"></p>
+            <button onclick="addloop(Number(document.getElementById('n1').value), Number(document.getElementById('n2').value))">Show Result</button>
+
+            <script>
+                function addloop(num1, num2){
+                    while (true) {
+                        if (isNaN (num1) || isNaN(num2)) {
+                        alert("Invalid, Please Input a Number!!!");
+                        break;
+                        } else {
+                            document.getElementById("Output").textContent = "Output: " + (num1 + num2);
+                        break;
+                        }
+                    
+                    }
+                }
+            </script> -->
+            
+            <!-- //modolus -->
+            <!-- <script>
+                for (let f = 0; f < 10; f++) {
+                    if (f % 2 == 0) continue;
+                    alert(f);
+                }
+
+            </script> -->
+
+    <!-- <script>
+        let options = [
+        'Ivan',
+        'Riz',
+        'iby',
+    ]
+        options.push('Justin', 'Melo', 'Jm');
+        options.unshift('First', 'Second');
+        alert(options);
+    </script> -->
+    
+    <!-- <input type="number"  id="nums" placeholder="Enter a Number:">
+    <button onclick="Add()">Add Number</button>
+    <p id="result"></p>
+    <button onclick="showres()">Result</button>
+
+    <p id="numss"></p>
+    <button onclick="shownums()">Current number</button>
+
+    <script>
+    let number = [];
+
+    function Add(){
+        while (true){
+            let value = document.getElementById('nums').value;
+            if (value == null || value.trim() == " " ) break;
+
+            number.push(+value);
+            document.getElementById('nums').value = "";
+            break;
+        }
+    }
+    function showres() {
+        let sum = 0;
+        for (let num of number){
+            sum += num;
+        } document.getElementById('result').textContent = "Output: " + sum;
+    }
+    function shownums(){
+        document.getElementById('numss').textContent = "Current Number: " + number;
+    }
+    </script> -->
+
+    <!-- <script>
+        let food = {
+            ph: 'turon',
+            usa: 'butter'
+        };
+        
+        let trans = prompt("Enter what's country signature food you're looking for: ", "");
+        if (trans in food) {
+            alert(food[trans]);
+        }   else{
+            alert("Nothing Found in the array");
+        }
+
+        let fruit = prompt("Which fruit to buy?", "");
+
+        let bag = {
+        [fruit]: 5, // the name of the property is taken from the variable fruit
+        };
+
+        alert( bag[fruit] ); // 5 if fruit="apple"
+
+        let product = prompt("What product will you buy?", "");
+
+        let cart = {
+            [product]: product +  " product id is : " + 5,
+        };
+
+        alert(cart[product]);
+
+        let info = {
+        name: "Ivan", 
+        surname: "Verana"
+        };
+        info.age = 19;
+
+        for (let news in info){
+            alert(news);
+            alert(info[news]);
+        }
+    </script> -->
+    
+    <!-- <p id="Output"></p>
+    <button onclick="totalamount()">Click</button>
+    <script>
+    let amount = 0;
+    function totalamount(){
+        amount++;
+        document.getElementById("Output").textContent = "Total Clicked: " + amount;
+    }
+    </script> -->
+
+    <!-- <input type="number"  id="nums" placeholder="Enter a Number:">
+    <button onclick="Add()">Add Number</button>
+    <p id="result"></p>
+    <button onclick="showres()">Result</button>
+    <p id="warning"></p>
+    <p id="numss"></p>
+    <button onclick="shownums()">Current number</button>
+
+    <script>
+    let number = [];
+    function Add() {
+        while (true){
+        let value = document.getElementById('nums').value;
+        if (value == null || value.trim() == "") break;
+
+        document.getElementById('nums').value = "";
+        number.push(+value);
+        break;
+    }
+    }
+    function showres() {
+        let sum = 0;
+        if (number.length <= 1){
+            document.getElementById('warning').textContent = "Invalid, please input another number!";
+        }   else{
+        for (let num of number){
+            sum+=num;
+        }   document.getElementById('result').textContent = "Result: " + sum;
+    }
+}
+
+    function shownums(){
+        document.getElementById('numss').textContent = "Number/s: " + number;
+    }
+    </script> -->
+
+        <!-- <div class="login-container">
+        <h2>Sign up</h2>
+        
+            <input type="text" id="Email" placeholder="Email" class="input-field" required><br>
+            <input type="password" id="Password" placeholder="Password" class="input-field" required><br>
+            <button onclick="checkEmailPass()" id="btn">Sign up</button>
+        
+        </div>
+
+        <script>
+            let info = [];
+            function checkEmailPass() {
+                let Email = document.getElementById("Email").value;
+                let Password = document.getElementById("Password").value;
+
+                if (Email == null || Email.trim() == ""){
+                    alert("Please Input Email!!!");
+                    return;
+                }   
+                if ( !Email.includes("@gmail.com")){     
+                    alert("Please Enter a valid Email!!!");
+                    return;
+                } 
+                if (Password.length < 10){
+                    alert("Make sure the password contains 10 characters!!") 
+                    return;
+                } 
+                info.push(Email);
+                info.push(Password);
+
+                document.getElementById("Email").value = "";
+                document.getElementById("Password").value = "";
+                alert("Sign up - Success")
+            }
+        
+        </script>
+        <style>
+        .login-container {
+            width: 300px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-field {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        #btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background-color: #0056b3;
+        }
+        </style> -->
+
+<!-- <h1 class="calc-title">Rizz Calculator</h1>
+<div class="calc-wrapper">
+    <div id="input" class="calc-display"></div>
+    <div class="calc-buttons">
+        <button onclick="appendValue('7')" class="btn num">7</button>
+        <button onclick="appendValue('8')"class="btn num">8</button>
+        <button onclick="appendValue('9')"class="btn num">9</button>
+        <button onclick="appendValue('/')"class="btn op">/</button>
+        <button onclick="appendValue('4')"class="btn num">4</button>
+        <button onclick="appendValue('5')"class="btn num">5</button>
+        <button onclick="appendValue('6')"class="btn num">6</button>
+        <button onclick="appendValue('*')"class="btn op">*</button>
+        <button onclick="appendValue('1')"class="btn num">1</button>
+        <button onclick="appendValue('2')"class="btn num">2</button>
+        <button onclick="appendValue('3')"class="btn num">3</button>
+        <button onclick="appendValue('-')"class="btn op">-</button>
+        <button onclick="appendValue('0')"class="btn num">0</button>
+        <button onclick="appendValue('%')"class="btn op">%</button>
+        <button onclick="appendValue('+')"class="btn op">+</button>
+        <button onclick="quest()"class="btn haha">?</button>
+        <button class="btn eq" onclick="calc()">=</button>
+        <button class="btn clear" onclick="clearDisplay()">Clear</button>
+    </div>
+</div>
+
+
+
+<script>
+    function appendValue(val){
+        let input = document.getElementById("input");
+        input.textContent += val;
+        }
+
+    function quest(){
+        document.getElementById('input').textContent = "Miss you";
+    }
+
+    function clearDisplay(){
+        document.getElementById('input').textContent = "";
+    }
+
+    function calc(){
+        let input = document.getElementById('input').textContent;
+
+        if (input.length <= 1 || input.trim() == "" ||  !/[+\-*/%]/.test(input)){
+            document.getElementById('input').textContent = "BOBO ay oh";
+            return;
+        }   
+        try {
+            let result = eval(input);
+            document.getElementById('input').textContent = result;
+        } catch (error){
+            document.getElementById('input').textContent = "BOBO AYUSIN MO";
+        }
+    }
+</script> -->
+
+<!-- <style>
+.calc-title {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+.calc-wrapper {
+    background: #222;
+    width: 340px;
+    margin: 40px auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 30px 20px 20px 20px;
+}
+.calc-display {
+    background: #111;
+    color: #fff;
+    font-size: 2.2rem;
+    border-radius: 10px;
+    padding: 18px 12px;
+    margin-bottom: 18px;
+    text-align: right;
+    min-height: 40px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    font-family: 'Consolas', monospace;
+}
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+.btn {
+    padding: 18px 0;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+}
+.btn.haha {
+    background:#FF033E;
+    padding: 3px;
+    font-size: 15px;
+}
+.btn.num {
+    background: #444;
+}
+.btn.op {
+    background: #007BFF;
+}
+.btn.eq {
+    background: #28a745;
+    grid-column: span 2;
+}
+.btn.clear {
+    background: #dc3545;
+    grid-column: span 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn:hover {
+    background: #555;
+    transform: translateY(-2px) scale(1.04);
+}
+.btn.op:hover {
+    background: #0056b3;
+}
+.btn.haha:hover {
+    background: #FF004F;
+}
+.btn.eq:hover {
+    background: #218838;
+}
+.btn.clear:hover {
+    background: #c82333;
+}
+</style> -->
+
+<style>
+        body {
+        background: #181818;
+        color: #fff;
+        font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+        text-align: center;
+        margin-top: 30px;
+        }
+
+        .dibb {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 10px;
+        background: #252525;
+        width: 320px;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        .InputTask {
+        width: 70%;
+        font-weight: bold;
+        padding: 20px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        }
+
+        .addT {
+        padding: 8px 16px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        align-self: center;
+        transition: background 0.3s ease;
+        width: 60px;
+        }
+
+        .addT:hover {
+        background: #45a049;
+        }
+
+        #taskList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        #taskList li {
+        padding: 8px 12px;
+        background: #333;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        }
+
+        #taskList li:hover {
+        background: #444;
+        }
+
+        #taskList li.completed {
+        text-decoration: line-through;
+        color: #888;
+        }
+</style>
+    <h1> Rizz Todo-List</h1> 
+    <div class="dibb">
+    <input type="text" name="" id="InputTask" placeholder="Enter Task:" class="InputTask">
+    <button onclick="addTask()" class="addT">Add</button>
+    <ul id="taskList"></ul>
+    </div>
+
+<script>
+    function addTask(){
+        let input = document.getElementById("InputTask").value;
+
+        if (input.trim() == ""){
+            alert("ENTER A TASK");
+            return;
+        }
+
+        let li = document.createElement("li");
+        li.textContent = input;
+
+        li.addEventListener("click", function(event){
+            event.target.style.textDecoration = "line-through"
+        });
+
+        li.addEventListener("dblclick", function(event){
+            li.remove();
+        });
+
+        li.addEventListener("contextmenu", function(event){
+            event.preventDefault();
+            event.target.style.textDecoration = "";
+        });
+
+        document.getElementById("taskList").appendChild(li);
+        document.getElementById("InputTask").value  = "";
+
+    }
+</script>
+</body>
+</html>

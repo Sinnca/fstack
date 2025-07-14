@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="/practice/php/search.php" method="get" id="form">
+    <label for="Search" class="Search">Query</label>
+    <input type="text" class="Search" id="Search" name="Query">
+    <input type="submit" class="Submit" value="Find">
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event){
+            let query = document.getElementById("Search").value;
+            if (query.trim() == ""){
+                alert("Please Enter what you looking for!");
+                event.preventDefault();
+            }
+        });
+    </script>
+</form>
+</body>
+</html>
