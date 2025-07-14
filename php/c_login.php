@@ -25,7 +25,7 @@
                 echo "Incorrect password, please try again. <br> <a href='/practice/html/consultant_login.html'>Click here to login again</a>";
             } 
         } else {
-                echo "NO Email have found";
+                echo "No Email have found";
             }
         }
     ?>
