@@ -7,7 +7,10 @@
 </head>
 <body>
     <?php
+
     require_once '../config/db.php';
+    
+
         if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["Email"], $_POST["Password"])){
             $Email = $_POST["Email"];
             $Password = $_POST["Password"];
@@ -19,7 +22,7 @@
                 $user_details = mysqli_fetch_assoc($data);
             
             if (password_verify($Password, $user_details["password"])){
-                header("Location: /practice/html/hahaha11.html");
+                header("Location: /practice/php/c_index.html");
                 exit;
             } else {
                 echo "Incorrect password, please try again. <br> <a href='/practice/html/consultant_login.html'>Click here to login again</a>";
